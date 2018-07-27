@@ -1,7 +1,3 @@
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-
-import io.reactivex.CompletableObserver;
 import io.reactivex.Observable;
 import io.reactivex.observables.ConnectableObservable;
 
