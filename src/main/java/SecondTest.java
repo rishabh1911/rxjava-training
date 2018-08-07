@@ -21,12 +21,7 @@ public class SecondTest {
 		//we can even pass comparators
 		Comparator<String> comparator = (s1,s2) -> s2.compareTo(s1);
 		source.map(String::toUpperCase).filter(s->s.length()<6).sorted(comparator).subscribe(System.out::println);
-		
-		
-		
-		
-		
-		
+	
 		List<String> list = Arrays.asList("one","two","three","four","five");
 		Observable<String> source2 = Observable.fromIterable(list);
 		source2.filter(no->no.length()>3).map(no->no.toUpperCase()).subscribe(System.out::println);

@@ -15,9 +15,9 @@ public class DeferTest {
 		
 		
 		Observable<Integer> source2 = Observable.defer(()->Observable.range(start, count));
-		source2.subscribe(x->System.out.println("Subscriber1: "+x));
+		source2.subscribe(x->System.out.println(Thread.currentThread().getName()+" Subscriber1: "+x));
 		count = 10;
-		source2.subscribe(x->System.out.println("Subscriber2: "+x));
+		source2.subscribe(x->System.out.println(Thread.currentThread().getName()+" Subscriber2: "+x));
 
 	}
 
